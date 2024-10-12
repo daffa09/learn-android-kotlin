@@ -1,0 +1,42 @@
+<resources>
+    <string name="app_name">FGO Characters</string>
+    <string name="character_name">Character Name</string>
+    <string name="description">Description</string>
+    <string name="list">List</string>
+    <string name="grid">Grid</string>
+    <string-array name="data_name">
+        <item>Jeanne d\'Arc Alter</item>
+        <item>Morgan Le Fae</item>
+        <item>Oberon</item>
+        <item>Arjuna Alter</item>
+        <item>Kamadeva</item>
+        <item>Altrai Caster</item>
+        <item>Gilgamesh</item>
+        <item>Mash</item>
+        <item>Miyamoto Musashi</item>
+    </string-array>
+    <string-array name="data_description">
+        <item>Although she is called "Alter,"</item>
+        <item>Although she is called "Alter,"</item>
+        <item>Although she is called "Alter,"</item>
+        <item>Although she is called "Alter,"</item>
+        <item>Although she is called "Alter,"</item>
+        <item>Although she is called "Alter,"</item>
+        <item>Although she is called "Alter,"</item>
+        <item>Although she is called "Alter,"</item>
+        <item>Although she is called "Alter,"</item>
+        <item>Although she is called "Alter,"</item>
+    </string-array>
+    <string-array name="data_photo">
+        <item>https://static.wikia.nocookie.net/fategrandorder/images/7/76/S106_Stage1.webp/revision/latest?cb=20220911061752</item>
+        <item>https://upload.wikimedia.org/wikipedia/commons/3/3f/Ahmad_Yani.jpg</item>
+        <item>https://upload.wikimedia.org/wikipedia/commons/e/ed/Bung_Tomo.jpg</item>
+        <item>https://upload.wikimedia.org/wikipedia/commons/b/be/Col_Gatot_Subroto%2C_Kenang-Kenangan_Pada_Panglima_Besar_Letnan_Djenderal_Soedirman%2C_p27.jpg</item>
+        <item>https://upload.wikimedia.org/wikipedia/commons/3/3a/Ki_Hadjar_Dewantara_Mimbar_Umum_18_October_1949_p2.jpg</item>
+        <item>https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/VP_Hatta.jpg/330px-VP_Hatta.jpg</item>
+        <item>https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Sudirman.jpg/486px-Sudirman.jpg</item>
+        <item>https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Presiden_Sukarno.jpg/330px-Presiden_Sukarno.jpg</item>
+        <item>https://upload.wikimedia.org/wikipedia/commons/a/a6/Supomo.jpg</item>
+        <item>https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/TanMalaka_DariPendjara_ed3.jpg/330px-TanMalaka_DariPendjara_ed3.jpg</item>
+    </string-array>
+</resources>
