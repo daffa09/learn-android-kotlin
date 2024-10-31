@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="activity_main" type="id" />
+    <item name="tv_name" type="id" />
+    <item name="tv_email" type="id" />
+    <item name="tv_phone" type="id" />
+    <item name="tv_age" type="id" />
+    <item name="tv_is_love_mu" type="id" />
+    <item name="btn_save" type="id" />
+</resources>
