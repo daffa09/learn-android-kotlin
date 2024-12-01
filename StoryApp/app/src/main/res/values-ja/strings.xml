@@ -1,0 +1,41 @@
+<resources>
+    <string name="app_name">Dicoding ストーリーアプリ</string>
+    <string name="story_author">投稿者: %1$s</string>
+    <string name="created_at">作成日: %1$s</string>
+
+    <!-- Placeholder -->
+    <string name="story_image_placeholder">ストーリー画像</string>
+    <string name="signup_image_contentDescription">登録画像</string>
+    <string name="name">名前</string>
+    <string name="email">メールアドレス</string>
+    <string name="password">パスワード</string>
+    <string name="creator">作成者: </string>
+    <string name="description">説明: </string>
+    <string name="email_warning">メール形式が間違っています。@gmail.com を使用してください。</string>
+    <string name="password_warning">パスワードは8文字以上である必要があります。</string>
+    <string name="title_signup_page">登録</string>
+    <string name="signup">登録</string>
+    <string name="welcome_message">"Dicoding ストーリーアプリへようこそ"</string>
+    <string name="gallery">ギャラリー</string>
+    <string name="camera">カメラ</string>
+    <string name="upload">アップロード</string>
+    <string name="go_sign_up">アカウントがありませんか？</string>
+    <string name="go_sign_in">すでにアカウントをお持ちですか？</string>
+    <string name="login_success">ログイン成功</string>
+    <string name="register_success">登録成功</string>
+    <string name="story_location">ストーリーの場所</string>
+    <string name="title_activity_maps" translatable="false">MapsActivity</string>
+    <string name="retry_load_page" translatable="false">リトライ</string>
+
+    <!-- Menu -->
+    <string name="login">ログイン</string>
+    <string name="logout">ログアウト</string>
+    <string name="change_language">言語を変更</string>
+    <string name="show_map">地図を表示</string>
+    <string name="english">英語</string>
+    <string name="indonesia">インドネシア語</string>
+    <string name="japan">日本語</string>
+    <string name="appwidget_text" translatable="false">私たちのストーリー</string>
+    <string name="add_widget" translatable="false">ウィジェットを追加</string>
+    <string name="app_widget_description" translatable="false">これはアプリウィジェットの説明です</string>
+</resources>

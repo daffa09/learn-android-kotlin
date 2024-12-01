@@ -1,0 +1,41 @@
+<resources>
+    <string name="app_name">Dicoding StoryApp</string>
+    <string name="story_author">Oleh: %1$s</string>
+    <string name="created_at">Dibuat pada: %1$s</string>
+
+    <!-- Placeholder -->
+    <string name="story_image_placeholder">Gambar Cerita</string>
+    <string name="signup_image_contentDescription">Gambar Pendaftaran</string>
+    <string name="name">Nama</string>
+    <string name="email">Email</string>
+    <string name="password">Kata Sandi</string>
+    <string name="creator">Dibuat oleh: </string>
+    <string name="description">Deskripsi: </string>
+    <string name="email_warning">Format email salah, harap gunakan @gmail.com</string>
+    <string name="password_warning">Kata sandi harus minimal 8 karakter</string>
+    <string name="title_signup_page">Daftar</string>
+    <string name="signup">DAFTAR</string>
+    <string name="welcome_message">"Selamat datang di Dicoding Story App"</string>
+    <string name="gallery">Galeri</string>
+    <string name="camera">Kamera</string>
+    <string name="upload">Unggah</string>
+    <string name="go_sign_up">Belum punya akun?</string>
+    <string name="go_sign_in">Sudah punya akun?</string>
+    <string name="login_success">Login Berhasil</string>
+    <string name="register_success">Pendaftaran Berhasil</string>
+    <string name="story_location">Lokasi Cerita</string>
+    <string name="title_activity_maps" translatable="false">MapsActivity</string>
+    <string name="retry_load_page" translatable="false">Coba Lagi</string>
+
+    <!-- Menu -->
+    <string name="login">Login</string>
+    <string name="logout">Logout</string>
+    <string name="change_language">Ubah Bahasa</string>
+    <string name="show_map">Tampilkan Peta</string>
+    <string name="english">Inggris</string>
+    <string name="indonesia">Indonesia</string>
+    <string name="japan">Jepang</string>
+    <string name="appwidget_text" translatable="false">Cerita Kami</string>
+    <string name="add_widget" translatable="false">Tambah Widget</string>
+    <string name="app_widget_description" translatable="false">Ini adalah deskripsi widget aplikasi</string>
+</resources>

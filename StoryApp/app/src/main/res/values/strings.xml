@@ -1,0 +1,41 @@
+<resources>
+    <string name="app_name">Dicoding StoryApp</string>
+    <string name="story_author">By : %1$s</string>
+    <string name="created_at">Created at : %1$s</string>
+
+    <!--    Placeholder-->
+    <string name="story_image_placeholder">Story Image</string>
+    <string name="signup_image_contentDescription">Register Image</string>
+    <string name="name">Name</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="creator">Created by : </string>
+    <string name="description">Description : </string>
+    <string name="email_warning">Wrong email format, please use @gmail.com</string>
+    <string name="password_warning">Password Must be at least 8 Character</string>
+    <string name="title_signup_page">Register</string>
+    <string name="signup">SIGN UP</string>
+    <string name="welcome_message">"Welcome to Dicoding Story App"</string>
+    <string name="gallery">Gallery</string>
+    <string name="camera">Camera</string>
+    <string name="upload">Upload</string>
+    <string name="go_sign_up">Don\'t have account yet?</string>
+    <string name="go_sign_in">Already have account?</string>
+    <string name="login_success">Login Success</string>
+    <string name="register_success">Register Success</string>
+    <string name="story_location">Story Location</string>
+    <string name="title_activity_maps" translatable="false">MapsActivity</string>
+    <string name="retry_load_page" translatable="false">Retry</string>
+
+    <!--    Menu -->
+    <string name="login">Login</string>
+    <string name="logout">Logout</string>
+    <string name="change_language">Change Language</string>
+    <string name="show_map">Show Map</string>
+    <string name="english">English</string>
+    <string name="indonesia">Indonesia</string>
+    <string name="japan">Japan</string>
+    <string name="appwidget_text" translatable="false">Our Story</string>
+    <string name="add_widget" translatable="false">Add widget</string>
+    <string name="app_widget_description" translatable="false">This is an app widget description</string>
+</resources>

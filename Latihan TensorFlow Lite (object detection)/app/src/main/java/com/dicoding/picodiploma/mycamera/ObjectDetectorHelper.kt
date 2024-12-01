@@ -46,11 +46,13 @@ class ObjectDetectorHelper(
             .setMaxResults(maxResults)
         val baseOptionsBuilder = BaseOptions.builder()
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O_MR1) {
-            baseOptionsBuilder.useNnapi()
+//            baseOptionsBuilder.useNnapi()
+            baseOptionsBuilder.setNumThreads(4)
         } else {
             // Menggunakan CPU
             baseOptionsBuilder.setNumThreads(4)
         }
+
         optionsBuilder.setBaseOptions(baseOptionsBuilder.build())
 
         try {
