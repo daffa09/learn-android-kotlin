@@ -21,6 +21,7 @@ class ObjectDetectorHelper(
     var threshold: Float = 0.5f,
     var maxResults: Int = 5,
     val modelName: String = "efficientdet_lite0_v1.tflite",
+//    val modelName: String = "font_classifier.tflite",
     val context: Context,
     val detectorListener: DetectorListener?
 ) {

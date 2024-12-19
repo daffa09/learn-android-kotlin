@@ -32,7 +32,7 @@ class StoryRepository(
     fun getAllStory() : LiveData<PagingData<ListStoryItem>> {
         return Pager(
             config = PagingConfig(
-                pageSize = 5,
+                pageSize = 8,
             ),
             remoteMediator = StoryRemoteMediator(storyDatabase, apiService),
             pagingSourceFactory = {

@@ -3,6 +3,7 @@ plugins {
     alias(libs.plugins.kotlin.android)
     id("kotlin-parcelize")
     id("com.google.devtools.ksp")
+    alias(libs.plugins.google.android.libraries.mapsplatform.secrets.gradle.plugin)
 }
 
 android {
@@ -51,9 +52,17 @@ dependencies {
     implementation(libs.material)
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
+    implementation(libs.androidx.exifinterface)
     testImplementation(libs.junit)
+    testImplementation(libs.junit.junit)
+    testImplementation(libs.junit.junit)
+    testImplementation(libs.junit.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+
+    //Maps
+    implementation(libs.play.services.maps)
+    implementation(libs.play.services.location)
 
     // CameraX
     implementation(libs.androidx.camera.camera2)

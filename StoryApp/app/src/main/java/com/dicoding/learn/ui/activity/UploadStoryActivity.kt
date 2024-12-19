@@ -1,6 +1,8 @@
 package com.dicoding.learn.ui.activity
 
+import android.Manifest
 import android.content.Intent
+import android.content.pm.PackageManager
 import android.net.Uri
 import android.os.Bundle
 import android.util.Log
@@ -9,6 +11,7 @@ import androidx.activity.result.PickVisualMediaRequest
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat
 import androidx.lifecycle.lifecycleScope
 import com.dicoding.learn.data.model.AddStoryResponse
 import com.dicoding.learn.databinding.ActivityUploadStoryBinding
@@ -16,15 +19,19 @@ import com.dicoding.learn.helpers.Result
 import com.dicoding.learn.helpers.getImageUri
 import com.dicoding.learn.helpers.reduceFileImage
 import com.dicoding.learn.helpers.showMaterialDialog
+import com.dicoding.learn.helpers.showToast
 import com.dicoding.learn.helpers.uriToFile
 import com.dicoding.learn.ui.viewmodels.UploadStoryViewModel
 import com.dicoding.learn.ui.viewmodels.ViewModelFactory
+import com.google.android.gms.location.FusedLocationProviderClient
+import com.google.android.gms.location.LocationServices
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 
 class UploadStoryActivity : AppCompatActivity() {
     private lateinit var binding : ActivityUploadStoryBinding
+    private lateinit var fusedLocationClient : FusedLocationProviderClient
     private val viewModel by viewModels<UploadStoryViewModel> {
         ViewModelFactory.getInstance(this)
     }
@@ -36,6 +43,8 @@ class UploadStoryActivity : AppCompatActivity() {
         binding = ActivityUploadStoryBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        fusedLocationClient = LocationServices.getFusedLocationProviderClient(this)
+
         setupAction()
     }
 
@@ -43,6 +52,16 @@ class UploadStoryActivity : AppCompatActivity() {
         viewModel.curImage.observe(this) {image ->
             binding.imagePreview.setImageURI(image)
         }
+
+        binding.buttonEnableLocation.setOnCheckedChangeListener {_, isChecked->
+            if(isChecked) {
+                getCurrentLocation()
+            } else {
+                lat = null
+                lon = null
+            }
+        }
+
         binding.buttonGallery.setOnClickListener { startGallery() }
         binding.buttonCamera.setOnClickListener { startCamera() }
         binding.buttonUpload.setOnClickListener { uploadStory() }
@@ -127,5 +146,33 @@ class UploadStoryActivity : AppCompatActivity() {
             flags = Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK
         }
         startActivity(intent)
+    }
+
+    private fun getCurrentLocation() {
+        if(ContextCompat.checkSelfPermission(
+                this,
+                Manifest.permission.ACCESS_FINE_LOCATION
+            ) == PackageManager.PERMISSION_GRANTED) {
+            fusedLocationClient.lastLocation
+                .addOnSuccessListener { loc ->
+                    if(loc != null) {
+                        lat = loc.latitude.toFloat()
+                        lon = loc.longitude.toFloat()
+                        showToast(this@UploadStoryActivity, "Added Location for Story")
+                    } else {
+                        showToast(this@UploadStoryActivity, "Location not found or disabled")
+                    }
+                }
+        } else {
+            requestPermissionLauncher.launch(Manifest.permission.ACCESS_FINE_LOCATION)
+        }
+    }
+
+    private val requestPermissionLauncher = registerForActivityResult(
+        ActivityResultContracts.RequestPermission()
+    ) {isGranted : Boolean ->
+        if(isGranted) {
+            getCurrentLocation()
+        }
     }
 }

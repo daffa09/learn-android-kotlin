@@ -1,4 +1,4 @@
-package com.dicoding.learn
+package com.dicoding.mystudentdata
 
 import org.junit.Test
 

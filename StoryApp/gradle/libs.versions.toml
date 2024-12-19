@@ -25,6 +25,7 @@ picassoVersion = "2.8"
 googleAndroidLibrariesMapsplatformSecretsGradlePlugin = "2.0.1"
 pagingRuntimeKtx = "3.3.4"
 roomPaging = "2.6.1"
+playServicesMaps = "19.0.0"
 coreTesting = "2.1.0"
 kotlinxCoroutinesTest = "1.6.1"
 mockitoCore = "4.4.0"
@@ -32,7 +33,6 @@ mockitoInline = "4.4.0"
 junitJunit = "4.12"
 
 [libraries]
-androidx-activity-testing = { module = "androidx.activity:activity-testing", version.ref = "activityTesting" }
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
 androidx-datastore-preferences = { module = "androidx.datastore:datastore-preferences", version.ref = "datastorePreferences" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
@@ -43,6 +43,9 @@ material = { group = "com.google.android.material", name = "material", version.r
 androidx-activity = { group = "androidx.activity", name = "activity", version.ref = "activity" }
 androidx-constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintlayout" }
 
+# Map Service
+play-services-maps = { group = "com.google.android.gms", name = "play-services-maps", version.ref = "playServicesMaps" }
+play-services-location = { module = "com.google.android.gms:play-services-location", version.ref = "playServicesMaps" }
 
 # Retrofit
 androidx-lifecycle-runtime-ktx = { module = "androidx.lifecycle:lifecycle-runtime-ktx", version.ref = "lifecycleRuntimeKtx" }

@@ -1,5 +1,6 @@
 package com.dicoding.learn.ui.activity
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.content.res.Configuration
 import android.os.Bundle
@@ -63,6 +64,7 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+    @SuppressLint("AppBundleLocaleChanges")
     @Suppress("DEPRECATION")
     private fun changeAppLanguage(code : String) {
         val locale = Locale(code)
@@ -96,14 +98,21 @@ class MainActivity : AppCompatActivity() {
                 true
             }
 
+            R.id.show_map -> {
+                startActivity(Intent(this@MainActivity, MapsActivity::class.java))
+                true
+            }
+
             R.id.language_english -> {
                 changeAppLanguage("en")
                 true
             }
+
             R.id.language_indonesian -> {
                 changeAppLanguage("id")
                 true
             }
+
             R.id.language_japanese -> {
                 changeAppLanguage("ja")
                 true

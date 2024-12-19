@@ -19,6 +19,8 @@ import androidx.core.content.res.ResourcesCompat
 import androidx.core.graphics.drawable.DrawableCompat
 import androidx.exifinterface.media.ExifInterface
 import com.dicoding.learn.BuildConfig
+import com.google.android.gms.maps.model.BitmapDescriptor
+import com.google.android.gms.maps.model.BitmapDescriptorFactory
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import java.io.ByteArrayOutputStream
 import java.io.File
@@ -144,4 +146,26 @@ fun formatDate(date : String) : String {
     val outputFormat = SimpleDateFormat("d MMMM yyyy HH:mm", Locale.getDefault())
     val parsedDate = inputFormat.parse(date)
     return outputFormat.format(parsedDate!!)
+}
+
+fun showToast(context: Context, message: String, duration: Int = Toast.LENGTH_SHORT) {
+    Toast.makeText(context, message, duration).show()
+}
+
+fun vectorToBitmap(@DrawableRes id: Int, @ColorInt color: Int, context : Context): BitmapDescriptor {
+    val vectorDrawable = ResourcesCompat.getDrawable(context.resources, id, null)
+    if (vectorDrawable == null) {
+        Log.e("BitmapHelper", "Resource not found")
+        return BitmapDescriptorFactory.defaultMarker()
+    }
+    val bitmap = Bitmap.createBitmap(
+        100,
+        100,
+        Bitmap.Config.ARGB_8888
+    )
+    val canvas = Canvas(bitmap)
+    vectorDrawable.setBounds(0, 0, canvas.width, canvas.height)
+    DrawableCompat.setTint(vectorDrawable, color)
+    vectorDrawable.draw(canvas)
+    return BitmapDescriptorFactory.fromBitmap(bitmap)
 }

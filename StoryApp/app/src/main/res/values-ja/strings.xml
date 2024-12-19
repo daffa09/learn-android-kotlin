@@ -38,4 +38,5 @@
     <string name="appwidget_text" translatable="false">私たちのストーリー</string>
     <string name="add_widget" translatable="false">ウィジェットを追加</string>
     <string name="app_widget_description" translatable="false">これはアプリウィジェットの説明です</string>
+    <string name="enable_location">位置情報を有効にする</string>
 </resources>
